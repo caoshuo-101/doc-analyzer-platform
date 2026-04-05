@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.env
+/data/
+*.db
+*.faiss
+*.meta
+
+# IDE
+.vscode/
+.idea/
+.env.example
