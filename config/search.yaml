@@ -1,0 +1,26 @@
+# search.yaml - 检索参数配置
+# 配置BM25、向量检索和混合检索的参数
+
+search:
+  # BM25关键词检索配置
+  bm25:
+    enabled: true
+    k1: 1.5        # 词频饱和度参数
+    b: 0.75        # 文档长度归一化参数
+
+  # 向量检索配置
+  vector:
+    enabled: true
+    top_k: 10      # 向量检索返回数量
+    embedding_model: "text-embedding-v3"
+
+  # 混合检索融合配置
+  fusion:
+    method: "rrf"  # 融合方法：rrf (Reciprocal Rank Fusion)
+    rrf_k: 60      # RRF平滑参数
+    final_top_k: 3 # 最终返回结果数量
+
+  # 权重配置（BM25:向量）
+  weights:
+    bm25: 0.4      # BM25权重
+    vector: 0.6    # 向量检索权重

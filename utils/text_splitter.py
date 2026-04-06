@@ -94,9 +94,9 @@ class TextSplitter:
         return end
 
     def split_document(
-        self,
-        content: str,
-        metadata: Dict[str, Any] = None
+            self,
+            content: str,
+            metadata: Dict[str, Any] = None
     ) -> List[Dict[str, Any]]:
         """
         分割文档并附加元数据
