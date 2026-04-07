@@ -19,6 +19,7 @@ class KnowledgeBase(BaseModel):
     document_count = Column(Integer, default=0, comment="文档数量")
 
     # 关系：一个知识库有多个文档
+    # 使用字符串引用避免循环导入
     documents = relationship("Document", back_populates="knowledge_base", cascade="all, delete-orphan")
 
     def __repr__(self) -> str:

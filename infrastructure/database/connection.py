@@ -51,6 +51,9 @@ async def get_db() -> AsyncGenerator[AsyncSession, None]:
 
 async def init_db():
     """初始化数据库，创建所有表"""
+    # 导入所有模型以确保它们被注册
+    from core.models import knowledge_base, document, conversation
+
     async with engine.begin() as conn:
         # 创建所有表
         await conn.run_sync(Base.metadata.create_all)
