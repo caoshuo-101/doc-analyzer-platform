@@ -239,4 +239,3 @@ search:
 |数据库        |SQLite + SQLAlchemy (异步)|
 |配置管理        |Pydantic Settings|
 |文档解析        unstructured / pypdf / python-docx|unstructured / pypdf / python-docx|
-> （注：文档部分内容可能由 AI 生成）
